@@ -11,9 +11,16 @@
 <body>
     <div class="container">
         <nav class="main-nav">
-            <img src="image/logo.jpg" alt="Douban" class="logo">
+            <img src="image/logo.png" alt="Douban" class="logo">
 
-            <input type="search" name="srhBox" id="srhBox" class="srhBox" placeholder="书籍、电影、音乐、小组、小站、成员">
+            <form action="#">
+                <span class="inp">
+                    <input type="text" placeholder="书籍、电影、音乐、小组、小站、成员">
+                </span>
+                <span class="bn">
+                    <button type="submit" value="submit">Search</button>
+                </span>
+            </form>
 
             <ul class="main-menu">
                 <li><a href="#">读书</a></li>
@@ -28,19 +35,62 @@
             </ul>
         </nav>
 
-        <div class="login">
-            <p>豆瓣6.0</p>
-            <button class="download">下载豆瓣App</button>
-            <img src="#" alt="QRcode" class="qrcode">
+        <!-- 登录注册 -->
+        <div class="login-block">
+            <div class="wrapper">
+                <div class="login-box">
+                    <div class="login-body-tab">
+                        <ul class="login-tab">
+                            <li class="phone-tab on">
+                                短信登陆 / 注册
+                            </li>
+                            <li class="pwd-tab">
+                                密码登录
+                            </li>
+                        </ul>
+                    </div>
 
-            <button class="text">短信登陆/注册</button>
-            <button class="pwd">密码登录</button>
+                    <div class="detail">
+                        <span>请仔细阅读</span>
+                        <a href="#" class="policy"> 豆瓣使用协议、隐私政策</a>
+                    </div>
 
-            <p>请仔细阅读 <a href="#" class="policy">豆瓣使用协议、隐私政策</a></p>
+                    <form action="#">
+                        <div class="login-account">
+                            <select name="district" id="district" class="district">
+                                <option value="86" selected>+86</option>
+                            </select>
+                            <input type="text" maxlength="11" class="phone" placeholder="手机号">
+                        </div>
+                        <div class="login-text-code">
+                            <input type="text" maxlength="4" class="text-code" placeholder="验证码">
+                            <a href="#" class="get-code">获取验证码</a>
+                        </div>
+                        <div class="account-submit">
+                            <a href="#" class="btn">登录豆瓣</a>
+                        </div>
+                        <div class="login-remember">
+                            <div class="remember">
+                                <input type="checkbox" name="remember" id="remember">
+                                <label for="remember">下次自动登录</label>
+                            </div>
+                            <a href="#" class="no-receive">收不到验证码</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="third-way">
+                    <p>第三方登录:</p>
+                    <a href="#"><img src="/image/wechat.svg" alt="wechat"></a>
+                    <a href="#"><img src="/image/wb.svg" alt="weibo"></a>
+                </div>
+            </div> <!-- wrapper -->
 
-            <input type="number" name="phoneNum" id="phoneNum">
-        </div>
-    </div>
+        </div> <!-- end of login-box -->
+    </div> <!-- end of container -->
+
+
+
+
 </body>
 
 </html>
