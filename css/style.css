@@ -23,7 +23,9 @@ a {
 .notes li > a:hover,
 .side li > a:hover,
 .time-list-title a:hover,
-.p1 a:hover {
+.p1 a:hover,
+.sidenav-links a:hover,
+#movie a:hover {
 	text-decoration: none;
 	color: #fff;
 	background-color: #37a;
@@ -328,8 +330,8 @@ a.lnk-qr > img {
 }
 
 .section {
-	padding: 10px 0;
-	margin-bottom: 30px;
+	padding: 8px 0;
+	margin-bottom: 20px;
 	min-height: 200px;
 }
 
@@ -352,10 +354,15 @@ a.lnk-qr > img {
 	line-height: 1.2;
 }
 
-.side > h2 {
+.side > h2,
+.side > .mod > h2 {
 	font: 15px Arial, Helvetica, sans-serif;
 	color: #072;
-	margin: 0 0 8px 0;
+	margin: 0 0 12px 0;
+}
+
+.side .mod {
+	margin-bottom: 20px;
 }
 
 .p1 {
@@ -493,4 +500,117 @@ a.time-list-cover {
 	color: #072;
 	margin: 0 0 7.5px 0;
 	line-height: 2.2;
+}
+
+#movie .sidenav {
+	width: 100px;
+	right: 20px;
+	margin-right: 20px;
+}
+
+#movie .sidenav > h2 {
+	margin-bottom: 12px;
+}
+
+#movie .side > .mod > h2,
+#movie .main > h2 {
+	padding-top: 9px;
+}
+
+#movie .sidenav-title > a:link {
+	font-size: 24px;
+	font-weight: 400;
+	color: #27a;
+}
+
+#movie .sidenav-links li {
+	margin-top: 8px;
+	font-size: 14px;
+}
+
+#movie .sidenav-links a:link {
+	color: #27a;
+}
+
+.movie-title {
+	font-size: 13px;
+	line-height: 1.45;
+	margin-bottom: 4px;
+}
+
+.movie-title > a {
+	color: #333;
+}
+
+.movie-poster {
+	margin-bottom: 10px;
+}
+
+.movie-poster > img {
+	width: 100px;
+}
+
+.movie-list a.ticket-btn {
+	background-color: #1c8bd0;
+	color: #fff;
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+a.ticket-btn:hover {
+	background-color: #047fcb;
+}
+
+.movie-list li {
+	text-align: center;
+	width: 24.8%;
+}
+
+.rating {
+	margin-bottom: 4px;
+	font-size: 13px;
+}
+
+.rating > i {
+	color: #e09015;
+	margin-left: 4px;
+}
+
+.rating > span {
+	display: inline-block;
+	width: 55px;
+	height: 11px;
+	margin: 0 3px 0 0;
+	overflow: hidden;
+	background-position: 0 -33px;
+}
+
+#movie .main {
+	width: 535px;
+}
+
+#movie .tags li {
+	display: inline-flex;
+	width: 4em;
+	margin-top: 6px;
+	text-align: left;
+}
+
+#movie .side {
+	width: 265px;
+	margin-left: 30px;
+	font-size: 12px;
+}
+
+.hotmovie li {
+	margin-bottom: 8px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #eaeaea;
+	list-style-position: inside;
+}
+
+.hotmovie li > a {
+	margin-left: 5px;
 }
