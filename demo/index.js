@@ -23,6 +23,6 @@ function renderTopics() {
 }
 
 
-(function() {
+(function(w) {
     renderTopics()
-}())
+}(window))
