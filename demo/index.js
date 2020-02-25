@@ -7,7 +7,7 @@ function renderTopics() {
         {title: '抗疫情时期的生活智慧', subtitle: '119.2万次浏览'},
         {title: '我的文化生活消费观', subtitle: '55.9万次浏览'}
     ]
-    let topics = document.querySelector('.topics')
+    const topics = document.querySelector('.topics')
     topics.innerHTML = `<ul>${createListItems(items)}</ul>`
 
     function createListItems(items) {
@@ -23,6 +23,6 @@ function renderTopics() {
 }
 
 
-(function() {
+(function(w) {
     renderTopics()
-}())
+}(window))
