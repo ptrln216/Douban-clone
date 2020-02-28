@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTRLN的豆瓣</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <img src="image/logo.png" alt="Douban" class="logo">
+
+            <form action="#">
+                <span class="inp">
+                    <input type="text" placeholder="书籍、电影、音乐、小组、小站、成员">
+                </span>
+                <span class="btn">
+                    <button type="submit" value="submit">Search</button>
+                </span>
+            </form>
+
+            <ul class="main-menu"></ul>
+        </nav>
+
+        <!-- 登录注册 -->
+        <div class="login-block">
+            <div class="wrapper">
+                <div class="login-box">
+                    <div class="login-body-tab">
+                        <ul class="login-tab">
+                            <li class="phone-tab on">
+                                短信登陆 / 注册
+                            </li>
+                            <li class="pwd-tab">
+                                密码登录
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="detail">
+                        <span>请仔细阅读</span>
+                        <a href="#" class="policy"> 豆瓣使用协议、隐私政策</a>
+                    </div>
+
+                    <form action="#">
+                        <div class="login-account">
+                            <select name="district" id="district" class="district">
+                                <option value="86" selected>+86</option>
+                            </select>
+                            <input type="text" maxlength="11" class="phone" placeholder="手机号">
+                        </div>
+
+                        <div class="login-text-code">
+                            <input type="text" maxlength="4" class="text-code" placeholder="验证码">
+                            <a href="#" class="get-code">获取验证码</a>
+                        </div>
+
+                        <div class="account-submit">
+                            <a href="#" class="btn">登录豆瓣</a>
+                        </div>
+
+                        <div class="login-remember">
+                            <div class="remember">
+                                <input type="checkbox" name="remember" id="remember">
+                                <label for="remember">下次自动登录</label>
+                            </div>
+                            <a href="#" class="no-receive">收不到验证码</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="third-way">
+                    <p>第三方登录:</p>
+                    <a href="#"><img src="image/wechat.svg" alt="wechat"></a>
+                    <a href="#"><img src="image/wb.svg" alt="weibo"></a>
+                </div>
+            </div> <!-- wrapper -->
+
+            <div class="app">
+                <p class="app-title">
+                    豆瓣
+                    <span>6.0</span>
+                </p>
+
+                <div class="dwnld">
+                    <a href="#" class="dwnld-btn">下载豆瓣 App</a>
+
+                    <div class="app-qr">
+                        <a href="#" class="lnk-qr">
+                            <img src="image/icon_qrcode_green.png" alt="appQRcode" width="28" height="28">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div> <!-- app -->
+
+        </div> <!-- end of login-box -->
+
+        <div id="sns" class="section">
+            <div class="wrapper">
+                <div class="main">
+                    <h2>热点内容&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;.
+                        <span class="p1">&nbsp;（
+                            <a href="#">更多</a>
+                            ）
+                        </span>
+                    </h2>
+
+                    <div class="wrapper-content">
+                        <div class="album"> </div>
+                        <div class="notes"> </div>
+                    </div>
+
+                </div> <!-- end of main -->
+
+                <div class="side">
+                    <h2>热门话题······
+                        <span class="p1">&nbsp;（
+                            <a href="#">去话题广场</a>
+                            ）
+                        </span>
+                    </h2>
+
+                    <div class="topics"> </div> <!-- end of topics-->
+                </div> <!-- end of side -->
+
+            </div> <!-- end of wrapper-->
+
+        </div> <!-- end of #sns-->
+
+        <div id="time" class="section">
+            <div class="wrapper">
+                <div class="side">
+                    <h2 class="section-title">
+                        <a href="#">豆瓣时间</a>
+                    </h2>
+                </div> <!-- side -->
+
+                <div class="main">
+                    <h2>热门专栏&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                        <span class="p1">&nbsp;（
+                            <a href="#">更多</a>
+                            ）
+                        </span>
+                    </h2>
+
+                    <div class="time-list"> </div> <!-- time-list -->
+
+                </div> <!-- main -->
+
+            </div> <!-- wrapper-->
+        </div> <!-- time section -->
+
+        <div id="movie" class="section">
+            <div class="wrapper">
+
+                <div class="sidenav">
+                    <h2 class="sidenav-title">
+                        <a href="#">电影</a>
+                    </h2>
+                    <div class="sidenav-links"> </div> <!-- categories-->
+                </div> <!-- sidenav -->
+
+                <div class="main">
+                    <h2>正在热映&nbsp;······
+                        <span class="p1">（
+                            <a href="#">更多</a>
+                            ）
+                        </span>
+                    </h2>
+
+                    <div class="movie-list"></div>
+                </div> <!-- main -->
+
+                <div class="side">
+                    <div class="mod">
+                        <h2>影片分类&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                            <span class="p1">&nbsp;（
+                                <a href="#">更多</a>
+                                ）
+                            </span>
+                        </h2>
+                        <div class="tags"> </div>
+                    </div>
+
+                    <div class="mod">
+                        <h2>近期热门&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                            <span class="p1">&nbsp;（
+                                <a href="#">更多</a>
+                                ）
+                            </span>
+                        </h2>
+
+                        <div class="hotmovie"></div>
+                    </div>
+                </div> <!-- side -->
+
+            </div> <!-- wrapper -->
+        </div> <!-- movie section -->
+
+    </div> <!-- end of container -->
+
+</body>
+
+</html>
