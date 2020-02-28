@@ -1,5 +1,5 @@
 function renderMainMenu() {
-	const menuName = [ '读书', '电影', '音乐', '同城', '小组', '阅读', 'FM', '时间', '豆品' ];
+	const menuName = ['读书', '电影', '音乐', '同城', '小组', '阅读', 'FM', '时间', '豆品'];
 	const mainMenu = document.querySelector('.main-menu');
 
 	let menuItems = '';
@@ -10,9 +10,88 @@ function renderMainMenu() {
 	mainMenu.innerHTML = menuItems;
 }
 
-function renderTopics() {
-	const topicItems = [
-		{
+function renderSns() {
+	renderSnsAlbum()
+	renderSnsNotes()
+	renderSnsTopics()
+}
+
+function renderSnsAlbum() {
+	const items = [{
+		id: 1,
+		cap: '必须是红红的 必须是圆圆的',
+		num: 54
+	}, {
+		id: 2,
+		cap: 'Gabriella Barouch',
+		num: 108
+	}, {
+		id: 3,
+		cap: '摺紙系列-氣球皮卡丘',
+		num: 15
+	}, {
+		id: 4,
+		cap: '玩羊毛',
+		num: 121
+	}]
+
+	const album = document.querySelector('.album')
+	album.innerHTML = `<ul>${createLi(items)}</ul>`
+
+	function createLi(items) {
+		let code = ''
+		items.forEach(item => {
+			code += `<li>
+			<div class="pic">
+				<a href="#">
+					<img src="image/hotspot Album/${item.id}.webp" alt="album cover">
+				</a>
+			</div>
+			<div class="cap">
+				<a href="#">${item.cap}</a>
+				<span class="num">${item.num}张照片</span>
+			</div>
+		</li>`
+		})
+		return code
+	}
+}
+
+function renderSnsNotes() {
+	const notes = document.querySelector('.notes')
+	const items = [
+		'不',
+		'混乱又鲜活：年末十八线城市的小商品批发市场',
+		'去婆婆家过年，一场无法逃避的乡村修行',
+		'在伊朗的一个月',
+		'在美国买到过期一个月的食品之后的维权经历',
+		'奶奶的昏迷',
+		'上海物候记录24-岑卜村：你见过上海的霜花吗？',
+		'蛇信',
+		'毕业即失业的一年半里我在做什么：读博还是工作？'
+	]
+
+	let code = ''
+	items.forEach(item => {
+		code += `
+		<li>
+			<a href="#">${item}</a>
+		</li>`
+	})
+
+	notes.innerHTML = `
+	<ul>
+		<li class="first">
+			<a href="#">旧日</a>
+			<p class="author">嘉凉的日记</p>
+			<p class="p1">整理相册。家里的老照片多得让人吃惊。 外公外婆性格温暖平和，十分注重家庭注重留...</p>
+		</li>
+		${code}
+	</ul>`
+}
+
+function renderSnsTopics() {
+	const topicItems = [{
 			title: '新冠肺炎预防指南',
 			subtitle: '5111.6万次浏览'
 		},
@@ -51,8 +130,7 @@ function renderTopics() {
 }
 
 function renderTimeList() {
-	const timeLists = [
-		{
+	const timeLists = [{
 			title: '电影产业破壁课——13小时重塑电影世界观',
 			type: '视频专栏',
 			id: 1
@@ -124,7 +202,7 @@ function renderMovie() {
 }
 
 function renderSideLinks() {
-	const linkItems = [ '影讯&购票', '选电影', '电视剧', '排行榜', '分类', '影评', '预告片', '问答' ];
+	const linkItems = ['影讯&购票', '选电影', '电视剧', '排行榜', '分类', '影评', '预告片', '问答'];
 
 	const sidenavLinks = document.querySelector('.sidenav-links');
 	sidenavLinks.innerHTML = `<ul>${createLi(linkItems)}</ul>`;
@@ -139,13 +217,11 @@ function renderSideLinks() {
 }
 
 function renderMovieList() {
-	const movies = [
-		{
-			title: '叶问4：完结篇...',
-			id: 1,
-			rating: 7.1
-		}
-	];
+	const movies = [{
+		title: '叶问4：完结篇...',
+		id: 1,
+		rating: 7.1
+	}];
 
 	const movieList = document.querySelector('.movie-list');
 	movieList.innerHTML = `<ul>${createLi(movies)}</ul>`;
@@ -219,7 +295,7 @@ function renderSideTags() {
 }
 
 function renderSideHotMovies() {
-	const items = [ '1917', '寄生虫', '小妇人', '囧妈', '乔乔的异想世界', '小丑', '阳光普照', '半个喜剧', '爱尔兰人', '婚姻故事' ];
+	const items = ['1917', '寄生虫', '小妇人', '囧妈', '乔乔的异想世界', '小丑', '阳光普照', '半个喜剧', '爱尔兰人', '婚姻故事'];
 
 	const hotMovie = document.querySelector('.hotmovie');
 	hotMovie.innerHTML = `<ol>${createLi(items)}</ol>`;
@@ -237,7 +313,7 @@ function renderSideHotMovies() {
 
 function render() {
 	renderMainMenu();
-	renderTopics();
+	renderSns()
 	renderTimeList();
 	renderMovie();
 }
